@@ -128,9 +128,25 @@ Request-Pro/
 2.  **Test-Driven**: 생각한 것을 **테스트(Red)**로 검증하지 않으면 코드로 옮기지 않는다. (Strict TDD 계승)
 3.  **Documentation-Complete**: 구현 후 **Swagger**를 통해 즉시 사용 가능한 문서로 종결한다. (DDD 계승)
 
+3.  **Documentation-Complete**: 구현 후 **Swagger**를 통해 즉시 사용 가능한 문서로 종결한다. (DDD 계승)
+
 ---
 
-## 8. 🔮 Future Roadmap (Evolution)
+## 8. 🪵 Logging System (AOP)
+
+이 프로젝트는 **AOP (Aspect-Oriented Programming)** 기반의 2-Tier 로그 추적 시스템을 갖추고 있습니다.
+
+### 8-1. Architecture
+*   **Infrastructure**: `Winston` (Transport: Console + File)
+*   **Tier 1 (Macro)**: `LogMiddleware` - 모든 HTTP 요청의 진입과 이탈을 기록 (URL, Status, Latency).
+*   **Tier 2 (Micro)**: `@Log` Decorator - 서비스 메서드의 실행 흐름, 파라미터, 소요 시간을 추적.
+
+### 8-2. Log UI (Real-time)
+*   `npm run logs` 명령어를 통해 **Frontail** 기반의 웹 UI(`:9001`)에서 실시간 로그 스트리밍을 제공합니다.
+
+---
+
+## 9. 🔮 Future Roadmap (Evolution)
 
 프로젝트가 확장됨에 따라 도입을 고려해야 할 기술적 주제들입니다.
 

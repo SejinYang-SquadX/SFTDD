@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/server.ts",
+    "dev:server": "ts-node src/server.ts",
+    "logs": "ts-node src/log-viewer.ts",
+    "dev": "echo '\n============================================================\n🚀 SFTDD 개발 환경\n============================================================\n\n각 터미널에서 실행:\n\n  📡 서버:      npm run dev:server\n  🧪 테스트:    npm run test:ui  \n  🪵 로그:      npm run logs\n\n접속 주소:\n\n  📄 Swagger:   http://localhost:3000/api\n  🧪 Test UI:   http://localhost:51204/__vitest__/\n  🪵 Log UI:    http://localhost:9001\n\n============================================================\n'",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:red": "vitest run test/**/Red",
@@ -31,10 +33,14 @@
     "vitest-mock-extended": "^3.1.0"
   },
   "dependencies": {
+    "chokidar": "^5.0.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.3",
+    "concurrently": "^9.2.1",
     "express": "^5.2.1",
+    "open": "^11.0.0",
     "reflect-metadata": "^0.2.2",
+    "socket.io": "^4.8.1",
     "swagger-ui-express": "^5.0.1",
     "winston": "^3.19.0"
   }

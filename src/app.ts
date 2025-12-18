@@ -5,10 +5,13 @@ import { HealthController } from './health/health.controller';
 import * as fs from 'fs';
 import * as path from 'path';
 
+import { LogMiddleware } from './common/middlewares/log.middleware';
+
 export const app = express();
 
 // Base Middleware
 app.use(express.json());
+app.use(LogMiddleware);
 
 // Load Swagger Docs
 const loadSwaggerDocs = () => {

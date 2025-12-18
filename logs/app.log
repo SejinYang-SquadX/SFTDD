@@ -1,0 +1,51 @@
+{"level":"info","message":"[HTTP] GET /api 302 - 3ms","timestamp":"2025-12-18T07:56:45.879Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/ 304 - 1ms","timestamp":"2025-12-18T07:56:45.881Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui.css 304 - 2ms","timestamp":"2025-12-18T07:56:45.888Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-bundle.js 304 - 2ms","timestamp":"2025-12-18T07:56:45.889Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-init.js 304 - 1ms","timestamp":"2025-12-18T07:56:45.891Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-standalone-preset.js 304 - 1ms","timestamp":"2025-12-18T07:56:45.892Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/favicon-32x32.png 304 - 0ms","timestamp":"2025-12-18T07:56:45.980Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 500 - 2ms","timestamp":"2025-12-18T07:59:20.347Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/ 304 - 4ms","timestamp":"2025-12-18T08:02:11.003Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui.css 304 - 1ms","timestamp":"2025-12-18T08:02:11.009Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-bundle.js 304 - 1ms","timestamp":"2025-12-18T08:02:11.010Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-init.js 304 - 0ms","timestamp":"2025-12-18T08:02:11.011Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-standalone-preset.js 304 - 1ms","timestamp":"2025-12-18T08:02:11.012Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/favicon-32x32.png 304 - 0ms","timestamp":"2025-12-18T08:02:11.058Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 500 - 3ms","timestamp":"2025-12-18T08:02:13.464Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 500 - 1ms","timestamp":"2025-12-18T08:02:15.218Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 500 - 1ms","timestamp":"2025-12-18T08:03:18.490Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/ 304 - 1ms","timestamp":"2025-12-18T08:03:20.482Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui.css 304 - 1ms","timestamp":"2025-12-18T08:03:20.498Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-bundle.js 304 - 1ms","timestamp":"2025-12-18T08:03:20.499Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-init.js 304 - 0ms","timestamp":"2025-12-18T08:03:20.500Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-standalone-preset.js 304 - 0ms","timestamp":"2025-12-18T08:03:20.500Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/favicon-32x32.png 304 - 1ms","timestamp":"2025-12-18T08:03:20.546Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 500 - 2ms","timestamp":"2025-12-18T08:03:23.194Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/ 304 - 6ms","timestamp":"2025-12-18T08:03:35.362Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui.css 304 - 2ms","timestamp":"2025-12-18T08:03:35.371Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-bundle.js 304 - 1ms","timestamp":"2025-12-18T08:03:35.371Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-init.js 304 - 0ms","timestamp":"2025-12-18T08:03:35.372Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-standalone-preset.js 304 - 1ms","timestamp":"2025-12-18T08:03:35.373Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/favicon-32x32.png 304 - 0ms","timestamp":"2025-12-18T08:03:35.414Z"}
+{"level":"info","message":"[Method] 🚀 HealthController.checkHealth called","timestamp":"2025-12-18T08:03:37.878Z"}
+{"level":"info","message":"[Method] ✅ HealthController.checkHealth execution time: 8ms","timestamp":"2025-12-18T08:03:37.886Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 200 - 9ms","timestamp":"2025-12-18T08:03:37.886Z"}
+{"level":"info","message":"[Method] 🚀 HealthController.checkHealth called","timestamp":"2025-12-18T08:03:39.851Z"}
+{"level":"info","message":"[Method] ✅ HealthController.checkHealth execution time: 2ms","timestamp":"2025-12-18T08:03:39.854Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 200 - 3ms","timestamp":"2025-12-18T08:03:39.854Z"}
+{"level":"info","message":"[Method] HealthController.checkHealth GET /","timestamp":"2025-12-18T08:05:23.522Z"}
+{"level":"info","message":"[Method] HealthController.checkHealth completed in 9ms","timestamp":"2025-12-18T08:05:23.530Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 200 - 10ms","timestamp":"2025-12-18T08:05:23.531Z"}
+{"level":"info","message":"[Method] HealthController.checkHealth GET /","timestamp":"2025-12-18T08:06:19.539Z"}
+{"level":"info","message":"[Method] HealthController.checkHealth completed in 11ms","timestamp":"2025-12-18T08:06:19.549Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 200 - 11ms","timestamp":"2025-12-18T08:06:19.549Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/ 304 - 6ms","timestamp":"2025-12-18T08:07:03.651Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui.css 304 - 2ms","timestamp":"2025-12-18T08:07:03.666Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-bundle.js 304 - 2ms","timestamp":"2025-12-18T08:07:03.667Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-init.js 304 - 0ms","timestamp":"2025-12-18T08:07:03.668Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/swagger-ui-standalone-preset.js 304 - 1ms","timestamp":"2025-12-18T08:07:03.669Z"}
+{"level":"info","message":"[HTTP] GET /api/docs/favicon-32x32.png 304 - 1ms","timestamp":"2025-12-18T08:07:03.720Z"}
+{"level":"info","message":"[Method] HealthController.checkHealth GET /api/v1/health","timestamp":"2025-12-18T08:07:06.472Z"}
+{"level":"info","message":"[Method] HealthController.checkHealth completed in 4ms","timestamp":"2025-12-18T08:07:06.476Z"}
+{"level":"info","message":"[HTTP] GET /api/v1/health 200 - 4ms","timestamp":"2025-12-18T08:07:06.476Z"}

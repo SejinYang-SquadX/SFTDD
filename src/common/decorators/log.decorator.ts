@@ -6,16 +6,21 @@ export function Log(target: any, propertyKey: string, descriptor: PropertyDescri
 
     descriptor.value = async function (...args: any[]) {
         const start = Date.now();
-        logger.log(`[Method] 🚀 ${className}.${propertyKey} called with args: ${JSON.stringify(args)}`);
+
+        // Extract request info if available
+        const req = args.find(arg => arg && arg.method && arg.originalUrl);
+        const reqInfo = req ? `${req.method} ${req.originalUrl}` : '';
+
+        logger.log(`[Method] ${className}.${propertyKey} ${reqInfo}`.trim());
 
         try {
             const result = await originalMethod.apply(this, args);
             const duration = Date.now() - start;
-            logger.log(`[Method] ✅ ${className}.${propertyKey} execution time: ${duration}ms`);
+            logger.log(`[Method] ${className}.${propertyKey} completed in ${duration}ms`);
             return result;
         } catch (error) {
             const duration = Date.now() - start;
-            logger.error(`[Method] ❌ ${className}.${propertyKey} failed after ${duration}ms: ${error}`);
+            logger.error(`[Method] ${className}.${propertyKey} failed after ${duration}ms: ${error}`);
             throw error;
         }
     };

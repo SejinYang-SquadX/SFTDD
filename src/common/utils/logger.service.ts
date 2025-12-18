@@ -16,7 +16,8 @@ export class LoggerService {
                         winston.format.colorize(),
                         winston.format.simple()
                     )
-                })
+                }),
+                new winston.transports.File({ filename: 'logs/app.log' })
             ]
         });
     }
