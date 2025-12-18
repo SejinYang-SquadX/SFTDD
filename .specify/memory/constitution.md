@@ -39,3 +39,13 @@ This document defines the **absolute principles** and **decision-making criteria
 ## 5. 🤖 AI Collaboration Rules
 1.  **Check Docs**: Ensure all 3 docs exist (Eng & Kor) before coding.
 2.  **Follow Order**: Docs -> Test -> Source -> **Swagger**.
+
+## 6. 🪵 Logging Principles
+1.  **Structured Only**: All logs must be JSON with `timestamp`, `level`, `traceId`, `event`, `reason`.
+2.  **Level Discipline**:
+    *   **ERROR**: Service failure (alert target)
+    *   **WARN**: Abnormal but recoverable
+    *   **INFO**: Business events only
+    *   **DEBUG**: Dev/debugging (disabled in production)
+3.  **TraceId Required**: Every HTTP request must have a unique `traceId` for tracking.
+4.  **Ask Before Logging**: Apply the 5-question test (see PROJECT_GUIDE.md Section 8-5).

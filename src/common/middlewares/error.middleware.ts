@@ -1,22 +1,26 @@
 import { Request, Response, NextFunction } from 'express';
-import { HttpException } from '../exceptions/http.exception';
+import { logger } from '../utils/logger.service';
+import { HttpException, InternalServerErrorException } from '../exceptions/http.exception';
 
-export const ErrorMiddleware = (
-    error: HttpException | Error,
-    req: Request,
-    res: Response,
-    next: NextFunction
-) => {
-    const status = error instanceof HttpException ? error.status : 500;
-    const message = error.message || 'Internal server error';
-    const timestamp = error instanceof HttpException ? error.timestamp : new Date().toISOString();
+export const ErrorMiddleware = (err: Error, req: Request, res: Response, next: NextFunction) => {
+    const error = err instanceof HttpException ? err : new InternalServerErrorException(err.message);
+    const status = error.status;
 
-    console.error(`[${timestamp}] Error: ${message}`);
+    logger.error('Request failed', {
+        event: 'REQUEST_FAILED',
+        traceId: (req as any).traceId || 'N/A',
+        reason: `${error.message} - HTTP ${status}`,
+        path: req.path,
+        method: req.method,
+        statusCode: status,
+        message: error.message,
+        stack: error.stack
+    });
 
     res.status(status).json({
-        status: status >= 500 ? 'error' : 'fail',
-        message: message,
-        timestamp: timestamp,
-        path: req.url
+        status: 'error',
+        message: error.message,
+        timestamp: new Date().toISOString(),
+        path: req.path
     });
 };

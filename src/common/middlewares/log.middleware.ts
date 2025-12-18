@@ -8,7 +8,16 @@ export const LogMiddleware = (req: Request, res: Response, next: NextFunction) =
     res.on('finish', () => {
         const { statusCode } = res;
         const duration = Date.now() - start;
-        logger.log(`[HTTP] ${method} ${originalUrl} ${statusCode} - ${duration}ms`);
+
+        logger.log('HTTP Request completed', {
+            event: 'HTTP_REQUEST',
+            traceId: (req as any).traceId || 'N/A',
+            reason: `${method} ${originalUrl} returned ${statusCode}`,
+            method,
+            url: originalUrl,
+            statusCode,
+            duration
+        });
     });
 
     next();

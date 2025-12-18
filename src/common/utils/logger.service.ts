@@ -22,20 +22,20 @@ export class LoggerService {
         });
     }
 
-    log(message: string) {
-        this.logger.info(message);
+    log(message: string, meta?: object) {
+        this.logger.info(message, meta);
     }
 
-    error(message: string, trace?: string) {
-        this.logger.error(message, { trace });
+    error(message: string, meta?: object) {
+        this.logger.error(message, meta);
     }
 
-    warn(message: string) {
-        this.logger.warn(message);
+    warn(message: string, meta?: object) {
+        this.logger.warn(message, meta);
     }
 
-    debug(message: string) {
-        this.logger.debug(message);
+    debug(message: string, meta?: object) {
+        this.logger.debug(message, meta);
     }
 }
 
