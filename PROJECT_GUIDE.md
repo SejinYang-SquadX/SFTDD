@@ -127,3 +127,18 @@ Request-Pro/
 1.  **Spec-First**: 코딩보다 **생각(Spec/Plan)**이 항상 먼저다. (SDD/RDD/DDD 계승)
 2.  **Test-Driven**: 생각한 것을 **테스트(Red)**로 검증하지 않으면 코드로 옮기지 않는다. (Strict TDD 계승)
 3.  **Documentation-Complete**: 구현 후 **Swagger**를 통해 즉시 사용 가능한 문서로 종결한다. (DDD 계승)
+
+---
+
+## 8. 🔮 Future Roadmap (Evolution)
+
+프로젝트가 확장됨에 따라 도입을 고려해야 할 기술적 주제들입니다.
+
+### 8-1. High-Performance Logging (ELK Stack)
+*   **Current**: Winston (개발 편의성, 가독성 중심)
+*   **Future**: **Pino** (Zero-overhead, JSON-only)
+*   **Why**: 트래픽이 급증하거나 로그량이 많아져 **ELK Stack (Elasticsearch, Logstash, Kibana)**을 붙여야 할 때, Pino의 성능과 구조화된 JSON 로그가 필수적입니다.
+*   **Action**: `LoggerService` 인터페이스를 유지한 채 내부 구현체만 Winston -> Pino로 교체하는 전략 사용.
+
+### 8-2. Advanced Automation
+*   **Husky**: 커밋 전 스펙 문서 존재 여부 및 테스트 통과 강제.

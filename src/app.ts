@@ -47,6 +47,13 @@ app.get('/api', (req, res) => {
     res.redirect('/api/docs');
 });
 
+import { ErrorMiddleware } from './common/middlewares/error.middleware';
+
+// ... existing code ...
+
 // Register Controllers
 const healthController = new HealthController();
 app.use('/api/v1/health', healthController.router);
+
+// Global Error Handler (MUST be last)
+app.use(ErrorMiddleware);

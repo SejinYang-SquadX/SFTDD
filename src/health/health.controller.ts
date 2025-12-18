@@ -1,6 +1,7 @@
-import { Router, Request, Response } from 'express';
+import { Router, Request, Response, NextFunction } from 'express';
 import { HealthService } from './health.service';
 import { PrismaClient } from '@prisma/client';
+import { Catch } from '../common/decorators/catch.decorator';
 
 export class HealthController {
     public router = Router();
@@ -16,7 +17,8 @@ export class HealthController {
         this.router.get('/', this.checkHealth.bind(this));
     }
 
-    async checkHealth(req: Request, res: Response) {
+    @Catch
+    async checkHealth(req: Request, res: Response, next: NextFunction) {
         const result = await this.healthService.checkHealth();
         if (result.status === 'ok') {
             res.status(200).json(result);
