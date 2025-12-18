@@ -142,7 +142,15 @@ Request-Pro/
 *   **Tier 2 (Micro)**: `@Log` Decorator - 서비스 메서드의 실행 흐름, 파라미터, 소요 시간을 추적.
 
 ### 8-2. Log UI (Real-time)
-*   `npm run logs` 명령어를 통해 **Frontail** 기반의 웹 UI(`:9001`)에서 실시간 로그 스트리밍을 제공합니다.
+*   `npm run logs` 명령어를 통해 **커스텀 로그 뷰어**(Socket.io 기반)에서 실시간 로그 스트리밍을 제공합니다.
+*   포트: `:9001`, 다크 테마 UI, 자동 브라우저 오픈
+
+### 8-3. Future AOP Expansion
+현재 구현된 `@Log`, `@Catch` 외에 추가 예정인 AOP 데코레이터:
+*   **@Auth**: 권한 검증 (Role-based Access Control)
+*   **@Transaction**: 트랜잭션 관리 (Prisma Transaction Wrapper)
+*   **@Metrics**: 성능 측정 및 메트릭 수집
+*   **@Validate**: 공통 유효성 검사 (DTO 검증 자동화)
 
 ---
 
